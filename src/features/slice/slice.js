@@ -15,13 +15,13 @@ const initialState = {
         state.tasks = state.tasks.filter(el=>el.id!==payload)
       },
       editTask: (state,{payload}) => {
-        state.tasks=state.tasks.map(el=>el.id===payload.id ? {...el,description:payload} : el)
+        state.tasks=state.tasks.map(el=>el.id===payload.id ? {...el,description:payload.editDesc} : el)
       },
       doneTask:(state,{payload})=> {
         state.tasks = state.tasks.map(el=>el.id===payload ? {...el,isDone: !el.isDone} : el)
       },
-      doneList:(state)=> {
-        state.tasks = state.tasks.filter(el=>el.isDone==true)
+      doneList:(state,{payload})=> {
+        state.tasks = state.tasks.filter(el=>payload.isDone===true)
       },
     },
     

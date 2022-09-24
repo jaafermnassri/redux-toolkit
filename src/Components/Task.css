@@ -1,0 +1,43 @@
+.Taskcard {
+    margin-top: 45px;
+    padding: 15px;
+    /* border: solid blue 2px; */
+    width: 40%;
+    border-radius: 25px;
+    color: mediumpurple;
+    box-shadow: 5px 10px #e5e2ff;
+}
+.Taskcard:hover {
+    box-shadow: 5px 10px #888888;
+    border: solid #888888 1px;
+}
+.Taskcard button {
+    background-color: rgb(157, 126, 218);
+    margin: 0 10px 0 0;
+    padding: 15px;
+    border: none;
+    color: aliceblue;
+    border-radius: 15px;
+    width: 90px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.Taskcard button:hover {
+    background-color: rgb(130, 86, 218);
+}
+
+.savein {
+    color: mediumpurple;
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: #eceaea;
+}
+.botns {
+    margin-right:0;
+}

@@ -8,9 +8,13 @@ import Undonelist from './Components/Undonelist';
 function App() {
   return (
     <div className="App">
-      <Donelist />
-      <Undonelist/>
+      <div className='heder'>
       <Add/>
+        <div className='donundon'>
+        <Donelist />
+        <Undonelist/>
+        </div>
+      </div>
       <Taskslist />
     </div>
   );

@@ -4,19 +4,17 @@ import { doneList } from "../features/slice/slice";
 
 import Task from "./Task";
 
-const Donelist = () => {
-  const donlist = useSelector((state) =>
-    state.todoReducer.tasks.filter((e) => e.isDone == true)
-  );
-  // const dispatch=useDispatch();
+const Donelist = ({el}) => {
+  const donlist = useSelector((state) =>state.todoReducer.tasks);
+  donlist.map((e) => (<Task e={e} />))
+  const handleClick = ()=>{
+    dispatch(doneList(el))
+  }
+  const dispatch=useDispatch();
   return (
     <div>
-      <button
-        onClick={donlist.map((e) => (
-          <Task e={e} />
-        ))}
-      >
-        done
+      <button onClick={handleClick} style={{backgroundColor:"mediumpurple",margin: 10,padding: 15,border: "none",color: "aliceblue",borderRadius: 15,width: 120,fontSize: 13,fontWeight:"bold"}}>
+       Done
       </button>
     </div>
   );
